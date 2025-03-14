@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:cardCornerRadius="12dp"
+    android:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Doctor Rank -->
+        <TextView
+            android:id="@+id/doctorRank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rank #1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/gradient_bg"
+            android:padding="4dp"
+            android:gravity="center"/>
+
+        <!-- Doctor Image -->
+        <ImageView
+            android:id="@+id/doctorImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/doctor_placeholder"
+            android:background="@drawable/rounded_bg"
+            android:layout_gravity="center"/>
+
+        <!-- Doctor Name -->
+        <TextView
+            android:id="@+id/doctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. John Doe"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Specialty -->
+        <TextView
+            android:id="@+id/doctorSpecialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Veterinary Surgeon"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/doctorRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐ 4.8"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFA500"
+            android:gravity="center"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Pets Treated -->
+        <TextView
+            android:id="@+id/petsTreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pets Treated: 320"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Appointment Button -->
+        <Button
+            android:id="@+id/appointmentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Make Appointment"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#008577"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/menu"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F8F9FA"
+        tools:context=".MainActivity">
+
+        <!-- Top Section: Profile & Search -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Profile Image -->
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user_home"
+                android:scaleType="centerCrop" />
+
+            <!-- Greeting Text -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1">   <!-- This pushes the notification icon to the right -->
+
+                <TextView
+                    android:id="@+id/greetingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi,Dasun Thathsara"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/subGreetingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How are you today?"
+                    android:textSize="14sp"
+                    android:textColor="#757575" />
+            </LinearLayout>
+
+            <!-- Notification Icon (Moved to the Right) -->
+            <ImageView
+                android:id="@+id/notificationIcon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/notification"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/search_background"
+            android:padding="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginBottom="8dp">
+
+            <!-- Search Icon -->
+            <ImageView
+                android:id="@+id/searchIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_search"
+                android:padding="8dp" />
+
+            <!-- Search Bar -->
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:hint="Search..."
+                android:textColorHint="@color/black"
+                android:alpha="0.7"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:paddingStart="8dp"
+                android:inputType="text" />
+        </LinearLayout>
+
+
+
+
+        <!-- Pet Care Service Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_bg"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/petCareTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pet Care Service"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:id="@+id/petCareSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Book an appointment for your pet’s health checkup and vaccinations."
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:alpha="0.7"
+                        android:layout_marginEnd="8dp"/>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:text="Make Appointment"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/btnBack"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <!-- Pet Image at the Far Right -->
+            <ImageView
+                android:id="@+id/petImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/bg_pet_icon"
+                android:layout_marginStart="10dp" />
+
+        </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <include layout="@layout/item_specialty" />
+                <include layout="@layout/item_specialty1" />
+                <include layout="@layout/item_specialty2" />
+                <include layout="@layout/item_specialty3" />
+                <include layout="@layout/item_specialty4" />
+                <include layout="@layout/item_specialty5" />
+                <include layout="@layout/item_specialty6" />
+                <include layout="@layout/item_specialty7" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <!-- Top Doctors Section -->
+        <TextView
+            android:id="@+id/topDoctorsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top Doctors"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_margin="16dp" />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/doctorRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"/>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
