@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="20dp"
+    android:background="@android:color/white"
+    android:elevation="4dp">
+
+    <!-- Rank Text -->
+    <TextView
+        android:id="@+id/doctorRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rank #1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Doctor Image inside CardView for rounded corners -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/doctorImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/doctor_placeholder" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Doctor Name -->
+    <TextView
+        android:id="@+id/doctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dr. John Doe"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp" />
+
+    <!-- Doctor Specialty -->
+    <TextView
+        android:id="@+id/doctorSpecialty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Veterinary Surgeon"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp" />
+
+    <!-- Doctor Rating -->
+    <TextView
+        android:id="@+id/doctorRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⭐ 4.8"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp" />
+
+    <!-- Pets Treated -->
+    <TextView
+        android:id="@+id/petsTreated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pets Treated: 320"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp" />
+
+    <!-- Appointment Button -->
+    <Button
+        android:id="@+id/appointmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Appointment"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp" />
+
+</LinearLayout>
