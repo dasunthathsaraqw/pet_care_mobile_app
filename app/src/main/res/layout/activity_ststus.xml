@@ -2,19 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ststus">
+    android:layout_height="match_parent">
 
-    <?xml version="1.0" encoding="utf-8"?>
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
+        android:id="@+id/mystatus"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".logInPage"
         android:background="@color/blue">
 
+        <!-- Bottom Navigation -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
             android:layout_width="0dp"
@@ -22,9 +20,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:menu="@menu/menu"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent" />
 
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
         <!-- Logo and System Name -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +33,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -46,22 +42,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="DASUN THATHSARA"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:layout_marginTop="20dp"
                 android:alpha="0.6"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                />
+                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pet Owner"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@color/white"
-                />
-
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <!-- Login Card -->
@@ -69,8 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="35dp"
-            android:layout_marginBottom="-30dp"
-
+            android:layout_marginBottom="0dp"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <LinearLayout
@@ -79,6 +71,7 @@
                 android:orientation="vertical"
                 android:padding="28dp">
 
+                <!-- Title: My Status -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -89,6 +82,7 @@
                     android:textSize="35sp"
                     android:textStyle="bold" />
 
+                <!-- Buttons -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/perInfo"
                     android:layout_width="match_parent"
@@ -97,7 +91,7 @@
                     android:backgroundTint="@color/blue"
                     android:text="EDIT PERSONAL INFO"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     app:cornerRadius="32dp" />
 
                 <View
@@ -111,7 +105,7 @@
                     android:backgroundTint="@color/blue"
                     android:text="EDIT PET INFO"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     app:cornerRadius="32dp" />
 
                 <View
@@ -123,9 +117,9 @@
                     android:layout_height="60dp"
                     android:alpha="0.7"
                     android:backgroundTint="@color/blue"
-                    android:text="VIEW DOCTER NOTIFICATION"
+                    android:text="VIEW DOCTOR NOTIFICATION"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     app:cornerRadius="32dp" />
 
                 <View
@@ -139,7 +133,7 @@
                     android:backgroundTint="@color/blue"
                     android:text="CANCEL REQUEST HISTORY"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     app:cornerRadius="32dp" />
 
                 <View
@@ -153,13 +147,12 @@
                     android:backgroundTint="@color/blue"
                     android:text="PAYMENT HISTORY"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     app:cornerRadius="32dp" />
 
                 <View
                     android:layout_width="wrap_content"
                     android:layout_height="10dp" />
-
 
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="match_parent"
@@ -169,13 +162,12 @@
                     android:backgroundTint="@color/blue"
                     android:text="APPOINTMENT HISTORY"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     app:cornerRadius="32dp" />
 
                 <View
                     android:layout_width="wrap_content"
                     android:layout_height="10dp" />
-
 
             </LinearLayout>
 

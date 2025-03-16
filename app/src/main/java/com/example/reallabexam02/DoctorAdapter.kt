@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class DoctorAdapter(
     private val context: Context,
-    private val doctorsList: List<Doctor>
+    private val doctorsList: MutableList<Doctor> // Changed to MutableList for dynamic updates
 ) : RecyclerView.Adapter<DoctorAdapter.DoctorViewHolder>() {
 
     class DoctorViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -29,7 +29,6 @@ class DoctorAdapter(
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_doctor_card, parent, false)
         return DoctorViewHolder(view)
     }
-
 
     override fun onBindViewHolder(holder: DoctorViewHolder, position: Int) {
         val doctor = doctorsList[position]
